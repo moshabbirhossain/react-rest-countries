@@ -11,7 +11,7 @@ const Country = ({country, handleVisitedCountry}) => {
     return (
         <div className={`country ${visited && 'visited'} m-2 overflow-x-hidden`}>
             <h1>{name.common}</h1>
-            <img src={flags.png} alt="" className='my-4'/>
+            <img src={flags.png} alt="" className='my-2 w-[320px] h-[90px] md:h-[160px] lg:h-[180px]'/>
             <h3 style={{color: visited? 'purple': 'white'}}>Capital: {capital}</h3>
             {/* <h5>Currencies: {currencies}</h5> */}
             <h6>Area: {area}</h6>

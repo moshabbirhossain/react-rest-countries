@@ -30,7 +30,7 @@ const Countries = () => {
                     }
                 </ul>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {
                     countries.map(country => <Country key={country.cca2} handleVisitedCountry={handleVisitedCountry} country={country}/>)
                 }
