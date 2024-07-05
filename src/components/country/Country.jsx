@@ -9,7 +9,7 @@ const Country = ({country, handleVisitedCountry}) => {
         setVisited(!visited)
     };
     return (
-        <div className={`country ${visited && 'visited'} w-fit mx-auto my-4`}>
+        <div className={`country ${visited && 'visited'} m-2 overflow-x-hidden`}>
             <h1>{name.common}</h1>
             <img src={flags.png} alt="" className='my-4'/>
             <h3 style={{color: visited? 'purple': 'white'}}>Capital: {capital}</h3>
@@ -17,7 +17,7 @@ const Country = ({country, handleVisitedCountry}) => {
             <h6>Area: {area}</h6>
             <h5>Population: {population}</h5>
             <button className='btn mr-2 mb-2' onClick={handleVisited}>{visited? 'Visited':'Going'}</button>
-            <button onClick={() => handleVisitedCountry(country)} className='btn'>Mark Visited</button>
+            {/* <button onClick={() => handleVisitedCountry(country)} className='btn'>Mark Visited</button> */}
             {/* {
                 // visited && 'I have visited this country'
                 // visited? "I have visited this country" : "I want to visit this country"

@@ -20,8 +20,8 @@ const Countries = () => {
     return (
         <div>
             <h1 className="mx-auto w-fit">Countries: {countries.length}</h1>
-            <div>
-                <h1>Visited Countries: {visitedCountries.length}</h1>
+            <div className="mx-auto w-fit">
+                {/* <h1>Visited Countries: {visitedCountries.length}</h1> */}
                 <ul>
                     {
                         visitedCountries.map(country =>(
@@ -30,7 +30,7 @@ const Countries = () => {
                     }
                 </ul>
             </div>
-            <div className="countries-container">
+            <div className="grid grid-cols-2 lg:grid-cols-3">
                 {
                     countries.map(country => <Country key={country.cca2} handleVisitedCountry={handleVisitedCountry} country={country}/>)
                 }
